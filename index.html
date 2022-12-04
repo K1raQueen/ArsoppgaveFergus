@@ -1,28 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Home </title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Home </title>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
- 
-<div id="frontpage">
+
+  <div id="frontpage">
 
 
-  <H1> Sigma Male Quiz </H1>
-
- 
- 
-<a href="game.html"> <button> Start game </button> </a>
+    <H1> 60 Second Quiz </H1>
 
 
 
+    <p> You have 60 seconds to answer as many questions as possible. Your
+      username and score will be visible to all players. </p>
 
-</div>
 
-<script src="script.js"> </script>
+    <img src="images/unname.jpg">
+
+<div id="form"></div>
+
+    <form action="game.html">
+
+      <label for="uname"> Username: </label> 
+      <input type="text" id="username" name="username" placeholder="Your name..">
+
+
+      <label for="genre"> Genre: </label>  
+
+      <select id="genre" name="genre">
+        <option value="usa"> Mainstream </option>
+        <option value="australia"> Music </option>
+        <option value="canada"> Anime </option>
+        <option value="canada"> Sigma Male </option>
+      </select>
+
+      <input type="submit" value="Submit and start game">
+
+    </form>
+
+
+
+
+
+  </div>
+
+  <script src="script.js"> </script>
 
 </body>
+
 </html>

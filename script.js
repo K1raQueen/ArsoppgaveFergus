@@ -1,51 +1,79 @@
 
+
+
+// 60 sec Timer
+
+function countdown() {
+    var seconds = 60;
+    function tick() {
+        var counter = document.getElementById("counter");
+        seconds--;
+        counter.innerHTML =
+            "0:" + (seconds < 10 ? "0" : "") + String(seconds);
+        if (seconds > 0) {
+            setTimeout(tick, 1000);
+        } else {
+
+            document.getElementById("counter").innerHTML = "";
+        }
+    }
+    tick();
+}
+
+// starter timer 
+countdown();
+
+
+
+// score, går opp for hvert riktig svar
 var score = 0;
 
-
+// spørsmålene 
 var questions = [
     {
-        prompt: "Who is this",
-        answer: "dd"
+        prompt: "Hva ar en par",
+        answer: "aper"
     },
     {
-        prompt: "Is hhkhhihs",
-        answer: "yes"
+        prompt: "Fullfør setningen: Ne",
+        answer: "ger"
+    },
+    {
+        prompt: "Hvem er gay?",
+        answer: "eddi"
     }
 ];
 
-let myQuestions = questions[Math.floor(Math.random() * questions.length)]
+// variabel som gjør at spørsmålene som blir valgt er tilvelig hver gang
+let myQuestion = questions[Math.floor(Math.random() * questions.length)]
 
+// funkksjon som velger et spørsmål 
 function pickQuestion() {
 
+    return (myQuestion);
 
-    return (myQuestions);
-
-
-    
 }
 
 
+// lagrer det valgte spørsmålet og setter det som overskrift
 var questionHeader = document.getElementById("questionHeader")
 
 questionHeader.innerHTML = pickQuestion().prompt
 
 
-
-
-
-
+// funksjon som gjør at hvis det man skriver inn på siden er det samme som svaret til spørsmålet får man pluss ett poeng
 function myFunction() {
     var response = document.getElementById("response").value
     var answer = pickQuestion().answer
-    console.log("response object: " + response)
-    console.log("correct answer: " + answer)
-    if (response === answer) {
-        score++
-        alert('correct')
-    } else {
-        alert('wrong')
-    }
 
+    if (response === answer) {
+        score++;
+        pickQuestion();
+        alert('correct');
+    } else {
+        alert('wrong');
+        pickQuestion();
+    }
 
 }
 
