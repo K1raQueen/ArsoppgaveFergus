@@ -35,8 +35,8 @@ var questions = [
         answer: "aper"
     },
     {
-        prompt: "Fullfør setningen: Ne",
-        answer: "ger"
+        prompt: "Fullfør setningen: java",
+        answer: "script"
     },
     {
         prompt: "Hvem er gay?",
@@ -44,20 +44,34 @@ var questions = [
     }
 ];
 
-// variabel som gjør at spørsmålene som blir valgt er tilvelig hver gang
-let myQuestion = questions[Math.floor(Math.random() * questions.length)]
+
+
+
+
+let myQuestion;
+
 
 // funkksjon som velger et spørsmål 
 function pickQuestion() {
 
+
+
+    // variabel som gjør at spørsmålene som blir valgt er tilvelig hver gang
+    myQuestion = questions[Math.floor(Math.random() * questions.length)]
+
+
     return (myQuestion);
+
 
 }
 
 
-// lagrer det valgte spørsmålet og setter det som overskrift
-var questionHeader = document.getElementById("questionHeader")
 
+
+// henter overskriften på siden og lagrer det i en variabel
+var questionHeader = document.getElementById("questionHeader");
+
+// bytter skriften i overskriften til spørsmålet valgt i pickquesition
 questionHeader.innerHTML = pickQuestion().prompt
 
 
@@ -68,11 +82,9 @@ function myFunction() {
 
     if (response === answer) {
         score++;
-        pickQuestion();
         alert('correct');
     } else {
         alert('wrong');
-        pickQuestion();
     }
 
 }
