@@ -9,12 +9,12 @@ var score = 0;
 // Spørsmålene 
 var questions = [
     {
-        prompt: "Hva koster 50 kroner og har sjokolade på seg?",
-        answer: "par"
+        prompt: "Hvilken kul person var på forsiden",
+        answer: "kanye west"
     },
     {
-        prompt: "Hva er den beste monster",
-        answer: "pacific"
+        prompt: "Hva koster 50 kr",
+        answer: "par"
     },
     {
         prompt: "Hvilken type male er Iulian",

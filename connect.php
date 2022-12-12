@@ -10,27 +10,29 @@ $password = filter_input(INPUT_POST, 'password');
 if (!empty($username)){
 if (!empty($password)){
 $host = "localhost";
-$dbusername = "root";
-$dbpassword = "";
+$dbusername = "fergus";
+$dbpassword = "Fergus10";
 $dbname = "fergus";
 
-// Create connection
-$conn = new mysqli ($host, $dbusername, $dbpassword, $dbname);
-if (mysqli_connect_error()){
-die('Connect Error ('. mysqli_connect_errno() .') '
-. mysqli_connect_error());
+// lager kobling
+$kobling = new mysqli ($host, $dbusername, $dbpassword, $dbname, 3325);
+
+ //Sjekk om kobling virker
+ if ($kobling->connect_error) {
+    die("Noe gikk galt: " . $kobling->connect_error);
 }
+
 else{
-$sql = "INSERT INTO account (username, password)
+$sql = "INSERT INTO users (username, password)
 values ('$username','$password')";
-if ($conn->query($sql)){
+if ($kobling->query($sql)){
 echo "New record is inserted sucessfully";
 }
 else{
 echo "Error: ". $sql ."
-". $conn->error;
+". $kobling->error;
 }
-$conn->close();
+$kobling->close();
 }
 }
 else{
