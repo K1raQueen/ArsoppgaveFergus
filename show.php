@@ -17,6 +17,7 @@
     //Angi UTF-8 som tegnsett
     $kobling->set_charset("utf8");
 
+    //Henter alt some ligger i tabellen
     $sql = 'SELECT * from users';
     $resultat = $kobling->query($sql);
 
@@ -27,7 +28,7 @@
     if (!$resultat) {
         echo "Noe gikk galt med spørringen $sql ($kobling->error).";
     } else {
-
+        //Loope gjennom alle verdiene i tabellen
         while ($rad = $resultat->fetch_assoc()) {
         $username = $rad["userName"];
         $password = $rad["password"];
