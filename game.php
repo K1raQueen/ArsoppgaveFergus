@@ -42,6 +42,9 @@
 
 
     </div>
+    <?php
+    include('show.php');
+    ?>
 
     <script src="script.js"> </script>
 

@@ -27,6 +27,7 @@ $sql = "INSERT INTO users (username, password)
 values ('$username','$password')";
 if ($kobling->query($sql)){
 echo "New record is inserted sucessfully";
+header('Location: game.php');
 }
 else{
 echo "Error: ". $sql ."
