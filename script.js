@@ -9,16 +9,16 @@ var score = 0;
 // Spørsmålene 
 var questions = [
     {
-        prompt: "Hvilken kul person var på forsiden",
-        answer: "kanye west"
+        prompt: "What is the capital of norway",
+        answer: "oslo"
     },
     {
-        prompt: "Hva koster 50 kr",
-        answer: "par"
+        prompt: "whats the smallest planet in the solar system",
+        answer: "mercury"
     },
     {
-        prompt: "Hvilken type male er Iulian",
-        answer: "beta"
+        prompt: "what does js stand for",
+        answer: "javascript"
     }
 
 ];
