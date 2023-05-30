@@ -9,17 +9,46 @@ var score = 0;
 // Spørsmålene 
 var questions = [
     {
-        prompt: "What is the capital of norway",
-        answer: "oslo"
+        prompt: "What country is this?",
+        answer: "brazil"
     },
     {
-        prompt: "whats the smallest planet in the solar system",
-        answer: "mercury"
+        prompt: "What country is this?",
+        answer: "cuba"
     },
     {
-        prompt: "what does js stand for",
-        answer: "javascript"
+        prompt: "What country is this?",
+        answer: "egypt"
+    },
+    {
+        prompt: "What country is this?",
+        answer: "greece"
+    },
+    {
+        prompt: "What country is this?",
+        answer: "japan"
+    },
+    {
+        prompt: "What country is this?",
+        answer: "mexico"
+    },
+    {
+        prompt: "What country is this?",
+        answer: "norway"
+    },
+    {
+        prompt: "What country is this?",
+        answer: "russia"
+    },
+    {
+        prompt: "What country is this?",
+        answer: "spain"
+    },
+    {
+        prompt: "What country is this?",
+        answer: "vietnam"
     }
+    
 
 ];
 
@@ -60,6 +89,13 @@ function answerCompare() {
         afterSubmit();
     }
 
+    var pictures = ["images/cuba.png", "images/egypt.png", "images/greece.png", "images/japan.png", "images/mexico.png", "images/norway.png", "images/russia.png", "images/spain.png", "images/vietnam.png"];
+
+    document.getElementById("picture").src = pictures[i];
+
+// Nullstiller teksten i formen
+    document.getElementById('form').reset();
+
 }
 
 
@@ -67,107 +103,19 @@ function answerCompare() {
 
 function afterSubmit() {
 
-    var pictures = ["images/walter-white-falling.gif", "images/american_pyscho.gif", "images/homelander.gif", "images/gigachad.gif"];
+    
 
     document.getElementById("after_submit").style.visibility = "visible";
 
     document.getElementById("number_correct").innerHTML = "You got " + score + "/" + questions.length + " correct.";
 
-    document.getElementById("picture").src = pictures[score];
-
-}
-
-
-
-/*
-for (var i=0; i < questions.length; i++ ) {
-
-
-  
-
-    document.write("<h1>"+ questions[i].prompt + "</h1>")
-
-    
-    
-    var answer = questions[i].answer
-
-   
-    var response = document.getElementById("response").value
-
-    if(response == answer) {
-      score++;
-      alert("wallah")
-      
-    } else {
-     
-    } 
-  }
-
-
-
-    // variabel som gjør at spørsmålene som blir valgt er tilvelig hver gang
-    
-    let myQuestion = questions[Math.floor(Math.random() * questions.length)]
     
 
-
-    // funkksjon som velger et spørsmål 
-    function pickQuestion() {
-
-    
-        return (myQuestion);
-    
-}
-
-
-    
-    // henter overskriften på siden og lagrer det i en variabel
-    var questionHeader = document.getElementById("questionHeader");
-    
-    // bytter skriften i overskriften til spørsmålet valgt i pickquesition
-    questionHeader.innerHTML = pickQuestion().prompt
-    
-
-
-
-
-
-// funksjon som gjør at hvis det man skriver inn på siden er det samme som svaret til spørsmålet får man pluss ett poeng
-function answerCompare() {
-
-        var response = document.getElementById("response").value
-        var answer = pickQuestion().answer
-
-        if (response === answer) {
-            score++;
-            alert('correct');
-        } else {
-            alert('wrong');
-        }
-    
 }
 
 
 
 
 
-function wallah(){
-alert("you got " + score + "/" + questions.length + " questions right");
-}
 
 
-
-
- for (var i=0; i < questions.length; i++ ) {
-   var response = window.prompt(questions[i].prompt);
-   if(response == questions[i].answer) {
-     score++;
-     
-   } else {
-    
-   } 
- }
- 
- alert("you got " + score + "/" + questions.length + " questions right");
- 
- */

@@ -112,3 +112,7 @@ input[type=submit]:hover {
 #pass {
     font-size: 20px;
 }
+
+#picture {
+    margin-top: 20px;
+}
