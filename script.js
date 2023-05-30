@@ -89,7 +89,7 @@ function answerCompare() {
         afterSubmit();
     }
 
-    var pictures = ["images/cuba.png", "images/egypt.png", "images/greece.png", "images/japan.png", "images/mexico.png", "images/norway.png", "images/russia.png", "images/spain.png", "images/vietnam.png"];
+    var pictures = ["", "images/cuba.png", "images/egypt.png", "images/greece.png", "images/japan.png", "images/mexico.png", "images/norway.png", "images/russia.png", "images/spain.png", "images/vietnam.png"];
 
     document.getElementById("picture").src = pictures[i];
 
