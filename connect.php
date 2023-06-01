@@ -14,6 +14,7 @@ $dbusername = "fergus";
 $dbpassword = "Fergus10";
 $dbname = "fergus";
 
+
 // lager kobling
 $kobling = new mysqli ($host, $dbusername, $dbpassword, $dbname, 3325);
 
