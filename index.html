@@ -11,19 +11,18 @@
 
 <body>
 
+<!-- Hele siden -->
   <div id="frontpage">
 
-
+<!-- Overskrift -->
     <H1> Quiz </H1>
-
-
 
     <p> Svar på alle spørsmålene  </p>
 
-
+<!-- Bilde -->
     <img src="images/norway.png">
 
-
+<!-- Login + submit -->
     <form action="connect.php" method="post">
 
       <label for="username"> Username: </label> 
@@ -33,31 +32,13 @@
       <input type="text" id="password" name="password" placeholder="Your password..">
  
 
-      <input type="submit" value="Start Game">
+      <input type="submit" value="Save score">
 
     </form>
 
-
-
-<!-- Highscoretabell -->
-<div id="highscoreOmraade" class="content">
-  <h2>Her er de ti beste resultatene, straight from your DB:</h2>
-  <?php
-      include('php/showTopTen.php');
- ?>
-
-</div>
-<div id="lagreScoreOmraade" class="content">
- <?php
-      include('php/lagreScore.php');
- ?>
-</div>
-
-
-
-  
-
+    
   </div>
+
 
   <script src="script.js"> </script>
 

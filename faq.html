@@ -8,16 +8,14 @@
 </head>
 <body>
     
+<style>
 
-<style> 
+    
+/* FAQ */
 
-*{
-    margin: 0;
-    padding: 0;
-}
 
 /* Bakgrunnen */
-body{
+#faq{
     font-family: 'Open Sans', sans-serif;
     color: #fff;
     background-color: #000;
@@ -38,14 +36,17 @@ body{
     
 }
 
+/* Container */ 
 .questions-container{
     max-width: 800px;
 }
 
+/* Strek mellom hvert spørsmål */
 .question{
     border-bottom: 1px solid #fff;
 }
 
+/* Spørsmål knapp */
 .question button{
     width: 100%;
     background-color: #000;
@@ -61,6 +62,7 @@ body{
     cursor: pointer;
 }
 
+/* Styler spørsmålene */
 .question p{
     font-size: 22px;
     max-height: 0;
@@ -76,73 +78,84 @@ body{
     color: #fff;
 }
 
-/* Legger til en klasse når man trykker på knappen */
-.question p.show{
+/* Svarene */
+.question .show{
     max-height: 200px; 
     opacity: 1;
     padding:0px 15px 30px 15px;
 }
 
-
-
 </style>
 
-
+<!-- Hel side -->
+<div id="faq">
 
     
         <h1 class="title">FAQ </h1>
-    
+
+<!-- Container -->
         <div class="questions-container">
+<!-- Spørsmål -->
             <div class="question">
                 <button>
                     <span> How can you log in using an already exsisting user? </span>
                     <i class="animation"></i>
                 </button>
+                <!-- Svar -->
                 <p> You can't. </p>
             </div>
-    
+<!-- Spørsmål -->    
             <div class="question">
                 <button>
                     <span> Will my score be saved? </span>
                     <i class="animation"></i>
                 </button>
+                <!-- Svar -->
                 <p> Yes </p>
             </div>
-    
+ <!-- Spørsmål -->   
             <div class="question">
                 <button>
                     <span> Is your code copyrighted? </span>
                     <i class="animation"></i>
                 </button>
+                <!-- Svar -->
                 <p> No, its free for use. </p>
             </div>
-    
+ <!-- Spørsmål -->   
             <div class="question">
                 <button>
                     <span> Is the game finished? </span>
                     <i class="animation"></i>
                 </button>
+                <!-- Svar -->
                 <p> No. </p>
             </div>
         </div>
   
 
+
+</div>
+
+
+
+
 <script> 
 
-const buttons = document.querySelectorAll('button');
-
-buttons.forEach( button =>{
-    button.addEventListener('click',()=>{
-        const faq = button.nextElementSibling;
-
-        faq.classList.toggle('show');
-        icon.classList.toggle('rotate');
-    })
-} )
-
-
-</script>
-
+    // FAQ
+    
+    const buttons = document.querySelectorAll('button');
+    
+    buttons.forEach( button =>{
+        button.addEventListener('click',()=>{
+            const faq = button.nextElementSibling;
+    
+            faq.classList.toggle('show');
+            icon.classList.toggle('rotate');
+        })
+    } )
+    
+     </script>
 
 
 

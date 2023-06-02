@@ -5,7 +5,7 @@
     overflow: hidden;
 }
 
-/* Frontpage */
+/* Forside */
 
 #frontpage {
     height: 100vh;
@@ -36,7 +36,7 @@
 }
 
 
-/* Quiz Page */
+/* Spill side */
 
 
 #game {
@@ -80,7 +80,19 @@ input[type=submit]:hover {
     background-color: #5b67bd;
 }
 
+#picture {
+    width: 700px;
+    height: 300x;
+    margin-top: 20px;
+}
 
+#response {
+    border: 2px solid black;
+}
+
+
+
+/* Score på slutten av quiz */
 #after_submit {
     visibility: hidden;
     background: #4c57af;
@@ -96,23 +108,7 @@ input[type=submit]:hover {
     margin: 70px;
 }
 
-#picture {
-    width: 700px;
-    height: 300x;
-}
 
-#response {
-    border: 2px solid black;
-}
 
-#user {
-    font-size: 20px;
-}
 
-#pass {
-    font-size: 20px;
-}
 
-#picture {
-    margin-top: 20px;
-}
